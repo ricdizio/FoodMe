@@ -60,7 +60,7 @@ exports.start = function(PORT, STATIC_DIR, DATA_FILE, TEST_DIR) {
 
   app.post(API_URL_ORDER, jsonParser, function(req, res, next) {  
     console.log(req.body);
-    /*
+    
     var order = req.body;
     var itemCount = 0;
     var orderTotal = 0;
@@ -74,7 +74,7 @@ exports.start = function(PORT, STATIC_DIR, DATA_FILE, TEST_DIR) {
       'itemCount': itemCount,
       'orderTotal': orderTotal
     });
-    */
+    
     return res.status(201).send({ orderId: Date.now() });
   });
 
