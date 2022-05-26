@@ -9,11 +9,11 @@ exports.config = {
   /**
    * Array of application names.
    */
-  app_name: ['FoodMe'],
+  app_name: ['foodMe'],
   /**
    * Your New Relic license key.
    */
-  license_key: process.env.LICENSE_KEY,
+  license_key: '2b1e22d9a8003705b3e148176229702d7bd1NRAL',
   logging: {
     /**
      * Level at which to log. 'trace' is most useful to New Relic when diagnosing
@@ -28,6 +28,14 @@ exports.config = {
    * attributes include/exclude lists.
    */
   allow_all_headers: true,
+  application_logging: {
+    forwarding: {
+      /**
+       * Toggles whether the agent gathers log records for sending to New Relic.
+       */
+      enabled: true
+    }
+  },
   attributes: {
     /**
      * Prefix of attributes to exclude from all destinations. Allows * as wildcard
